@@ -1,4 +1,4 @@
-#Network Automation Project
+# Network Automation Project
 This is a repository for the capstone project by Ming Xia and Mark Rodriguez.
 
 ## Description of Main Files
