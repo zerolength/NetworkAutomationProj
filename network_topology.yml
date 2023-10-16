@@ -20,18 +20,19 @@ routers:   # describing object that can route and interface between subnets
     interfaces:
       - name: "to-purple-core"
         ip: "10.1.5.1"
-	subnet: ""
+	      subnet: ""
       - name: "to-orange-core"
         ip: "10.1.5.13"
-	subnet: ""
+	      subnet: ""
       - name: "loopback"
-	ip: ""
-	subnet: ""
+	      ip: ""
+	      subnet: ""
+    nexthop: 
 
 hosts:  # list of hosts to create
-- name: "phost"
+  - name: "phost"
 	#only need interface  check IP against subnet
- interfaces: ""
- 	subnets: ""
-	ip: ""
-	vlan: ""
+    interfaces: ""
+    subnets: ""
+	  ip: ""
+    vlan: ""
