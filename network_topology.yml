@@ -8,6 +8,7 @@ subnets: #strucure describing network adddress range will take ip address as met
     gw: "10.1.1.1"
     dhcp_range: "10.1.1.21,10.1.1.150"
 
+
   - name: "purple-core"
     subnet_ip: "10.1.5.0"
     bridge: no
