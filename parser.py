@@ -29,23 +29,27 @@ class Subnet ():
     def __del__ (self):
         subprocess.run(["sudo","ip","netns","del",self.nsname]) 
 class Router ():
-    def __init__ (self, rname, ip, subnet)
+    def __init__ (self, rname, interfaces)
         self.rname = rname
-        self.ip = ip
-        self.subnet = subnet
+        self.inf = interfaces
+        #add routing code here
+    def __del__ (self):
     
 def main ():
     filename = "network_topology.yml"
     assembly = importer(filename)
     subnets = assembly ['subnets']
-    holder = []
+    sholder = []   
     print (subnets)
     for object in subnets:
         new_subnets = Subnet (nsname=object['name'],bridge=object['bridge'],ip=object['subnet_ip'])
-        
         holder.append(new_subnets)
-
     print (holder)
+    routers = assembly ['routers']
+    rholder = []
+    for object in routers:
+        new_router = Router (rname = oject['name'], interfaces = object[interfaces])
+    
     input("Press Enter to continue...you can check if netns is up")
 if __name__ == "__main__":
     main()
